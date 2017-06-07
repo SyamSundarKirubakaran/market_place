@@ -23,6 +23,19 @@
 	</head>
 	<body>
 		<div id="content">
+            
+          <!--  <?php
+                $imageSelect="Select * from images";
+            $result=mysqli_query($db,$imageSelect);
+            while($row=mysqli_fetch_array($result)){
+                echo "<div id='img_div'>";
+                    echo "<img src='images/".$row['image']."' >";
+                echo "<p>".$row['text'],"</p>";
+                echo "<div />";
+            }
+            
+            ?> -->
+            
 			<form method="post" action="index.php" enctype="multipart/form-data">
 				<input type="hidden" name="size" value="1000000" />
 				<div>
