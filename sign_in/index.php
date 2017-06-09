@@ -1,8 +1,43 @@
 <!DOCTYPE html>
+
+<?php
+
+if (isset($_POST['submit'])) {
+$dbUser="root";
+$dbPassword="root";
+$dbServer="localhost:8889";
+$dbName="final_db";
+$connection=new mysqli($dbServer,$dbUser,$dbPassword,$dbName);
+    
+    if($connection->connect_errno){
+    //echo "Database Connection Failed.. Reason ".$connection->connect_error;
+    exit("Database Connection Failed.. Reason ".$connection->connect_error);
+    
+}else{
+        $email=$_POST['email'];
+$password=$_POST['password'];
+$query="Select * from sign_up where email='$email'";
+$resultObj=$connection->query($query);
+$row=$resultObj->fetch_assoc();
+//echo $row['pass'];
+        
+if(strcmp($password,$row['pass'])==0){
+ ?> <meta http-equiv="refresh" content="0;url=http://localhost:8888/loaders/processing.html" />
+<?php
+}else{
+    ?><script>
+    alert("Invalid User Name and Password.. If you are not a member make sure you sign up..");
+</script><?php
+}
+}
+}
+
+?>
+
 <html >
 <head>
   <meta charset="UTF-8">
-  <title>Material Design Form Inputs</title>
+    <title>Location Logger-Login </title>
   
   
   
@@ -17,9 +52,9 @@
 		
 		<section class="card wow fadeInLeft">
 			
-			<h3 class="wow fadeInDown" data-wow-delay="0.4s">Login Form</h3>
+			<h3 class="wow fadeInDown" data-wow-delay="0.4s">Login</h3>
 
-			<form action="#" class="form" method="post">
+			<form action="index.php" class="form" method="post">
 			    <div class="form__wrapper wow fadeInDown" data-wow-delay="0.5s">
 			        <input type="email" class="form__input" id="email" name="email">
 			        <label class="form__label" for="email">
@@ -72,11 +107,11 @@
 
 		<footer class="footer padding-tb">
 			<div class="footer__content">
-				<p class="text-center text-small">Inspired from Ben Mildren pen at <a href="https://codepen.io/mildrenben/pen/gbddEj">codepen</a>.</p>
-				<p class="text-center text-small">Created by <a href="https://mithicher.github.io">mithicher</a> | Tweet me <a href="https://twitter.com/mithicher">@mithicher</a>. 
+				<p class="text-center text-small">Copyright || <a href="#">Location Logger</a>.</p>
+				<!--<p class="text-center text-small">Created by <a href="https://mithicher.github.io">mithicher</a> | Tweet me <a href="https://twitter.com/mithicher">@mithicher</a>. 
 				Plugins used <a href="https://daneden.github.io/animate.css/">Animate.css</a>, <a href="http://mynameismatthieu.com/WOW/">WOW.js</a>
 				and <a href="https://jqueryvalidation.org/">jQuery Validation Plugin</a>
-				</p>
+				</p>-->
 			</div>
 		</footer><!-- /footer -->
 			</section><!-- /site-container -->

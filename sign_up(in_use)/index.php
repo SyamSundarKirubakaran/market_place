@@ -6,7 +6,19 @@
 //print_r($_POST);
 //echo "</pre>";
 
+if (isset($_POST['submit'])) {
 $db = mysqli_connect("localhost:8889", "root", "root", "final_db");
+    $email=null;
+$password=null;
+$fname=null;
+$lname=null;
+$username=null;
+$phone=null;
+$age=null;
+$gender=null;
+$address=null;
+$locality=null;
+$twitter=null;
 $email=$_POST['email'];
 $password=$_POST['password'];
 $fname=$_POST['fname'];
@@ -18,9 +30,14 @@ $gender=$_POST['gender'];
 $address=$_POST['address'];
 $locality=$_POST['locality'];
 $twitter=$_POST['twitter'];
+    if($email!=null && $password!=null && $fname!=null && $lname!=null && $username!=null && $phone!=null && $age!=null && $gender!=null && $address!=null && $locality!=null && $twitter!=null ){
 
 $sql = "INSERT INTO `sign_up`(`email`, `pass`, `fname`, `lname`, `user_name`, `phone`, `age`, `gender`, `address`, `locality`, `twitter`) VALUES ('$email','$password','$fname','$lname','$username','$phone','$age','$gender','$address','$locality','$twitter')";
-mysqli_query($db, $sql);
+mysqli_query($db, $sql);?><meta http-equiv="refresh" content="0;url=http://localhost:8888/loaders/processing.html" /><?php
+    }else{
+?><script>alert("Please fill all entries");</script><?php
+    }
+}
 ?>
 
 
@@ -54,14 +71,14 @@ mysqli_query($db, $sql);
 			     </div>
 
 			    <div class="form__wrapper wow fadeInDown" data-wow-delay="0.6s">
-			        <input type="password" class="form__input" id="password"  name="password">
+			        <input type="password" class="form__input" id="password"  name="password" maxlength="15">
 			        <label class="form__label" for="password">
 						<span class="form__label-content">Password</span>
 					</label>
 			       
 			     </div>
                 <div class="form__wrapper wow fadeInDown" data-wow-delay="0.6s">
-			        <input type="password" class="form__input" id="cpassword"  name="cpassword">
+			        <input type="password" class="form__input" id="cpassword"  name="cpassword" maxlength="15">
 			        <label class="form__label" for="password">
 						<span class="form__label-content">Confirm Password</span>
 					</label>
@@ -86,25 +103,25 @@ mysqli_query($db, $sql);
 					</label>
 			     </div>
                 <div class="form__wrapper wow fadeInDown" data-wow-delay="0.5s">
-			        <input type="number" class="form__input" id="phone" name="phone">
+			        <input type="number" class="form__input" id="phone" name="phone" maxlength="10">
 			        <label class="form__label" for="email">
 						<span class="form__label-content">Phone(+91)</span>
 					</label>
 			     </div>
                 <div class="form__wrapper wow fadeInDown" data-wow-delay="0.5s">
-			        <input type="number" class="form__input" id="age" name="age">
+			        <input type="number" class="form__input" id="age" name="age" maxlength="2">
 			        <label class="form__label" for="email">
 						<span class="form__label-content">Age</span>
 					</label>
 			     </div>
                 <div class="form__wrapper wow fadeInDown" data-wow-delay="0.5s">
-			        <input type="text" class="form__input" id="gender" name="gender">
+			        <input type="text" class="form__input" id="gender" name="gender" maxlength="1">
 			        <label class="form__label" for="email">
 						<span class="form__label-content">Gender(M/F)</span>
 					</label>
 			     </div>
                 <div class="form__wrapper wow fadeInDown" data-wow-delay="0.5s">
-			        <textarea type="text" class="form__input" id="address" name="address"></textarea>
+			        <textarea type="text" class="form__input" id="address" name="address" maxlength="150"></textarea>
 			        <label class="form__label" for="email">
 						<span class="form__label-content">Address</span>
 					</label>
@@ -116,7 +133,7 @@ mysqli_query($db, $sql);
 					</label>
 			     </div>
                 <div class="form__wrapper wow fadeInDown" data-wow-delay="0.5s">
-			        <input type="text" class="form__input" id="twitter" name="twitter">
+			        <input type="text" class="form__input" id="twitter" name="twitter" >
 			        <label class="form__label" for="email">
 						<span class="form__label-content">**Twitter(@User_name)</span>
 					</label>
@@ -130,9 +147,9 @@ mysqli_query($db, $sql);
 			        </div>
 			    </div>
 			</form>
-			<div class="text-center text-small wow fadeInLeft" data-wow-delay="0.8s"><a href="#" class="modal__toggle">Forgot Password ?</a></div>
+			<div class="text-center text-small wow fadeInLeft" data-wow-delay="0.8s"><a href="../sign_in/index.html" >Already have an account..</a></div>
 			 
-			<div class="modal">
+			<!--<div class="modal">
 				<a href="#" class="modal--close modal__toggle">&times;</a>
 				
 				<h3>Recover Password</h3>

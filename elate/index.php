@@ -206,8 +206,8 @@
 		            <li><a href="#" data-nav-section="services"><span>Services</span></a></li>
 		            <li><a href="#" data-nav-section="about"><span>About</span></a></li>
 		            <li><a href="#" data-nav-section="contact"><span>Contact</span></a></li>
-                    <li><a href="#" data-nav-section="#"><span>Login</span></a></li>
-                    <li><a href="#" data-nav-section="#"><span>Sign Up</span></a></li>
+                    <!--<li><a href="../loaders/processing.html"><span>Login</span></a></li>
+                    <li><a href="../loaders/processing.html"><span>Sign Up</span></a></li>-->
 		          </ul>
 		        </div>
 			    </nav>
@@ -222,8 +222,8 @@
 				<div class="text-inner">
 					<div class="row">
 						<div class="col-md-8 col-md-offset-2">
-							<h1 class="to-animate">Visit the place you love..</h1>
-							<h2 class="to-animate">Welcome to <a href="#" target="_blank" title="location logger">Location Logger</a> a place where you can hire regional grounds and have fun time with friends, family and with your loved ones </h2>
+							<h1 class="to-animate">Visit the place you love, <a href="../loaders/signup_load.html" target="_blank" title="location logger">Sign Up</a></h1>
+							<h2 class="to-animate">Welcome to <a href="#" title="location logger">Location Logger</a> a place where you can hire regional grounds and have fun time with friends, family and with your loved ones. Already been here! Then Welcome back, <a href="../loaders/signin_load.html" title="location logger">Signin</a> </h2>
 						</div>
 					</div>
 				</div>
@@ -266,11 +266,11 @@
 					</div>
 				</div>
 			</div>
-			<div class="row watch-video text-center to-animate">
+			<!--<div class="row watch-video text-center to-animate">
 				<span>Watch the video</span>
 
 				<a href="#" class="popup-vimeo btn-video"><i class="icon-play2"></i></a>
-			</div>
+			</div>-->
 		</div>
 	</section>
 

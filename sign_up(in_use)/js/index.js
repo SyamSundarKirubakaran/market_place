@@ -21,7 +21,7 @@ $(document).ready(function() {
 			$('.form').validate({
 				rules : {
 					password: {
-						minlength: 10
+						minlength: 5
 					}
 				}
 			}); 
