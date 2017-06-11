@@ -1,7 +1,8 @@
 <!DOCTYPE html>
 
 <?php
-
+//ob_start();
+session_start();
 //echo "<pre>";
 //print_r($_POST);
 //echo "</pre>";
@@ -33,7 +34,13 @@ $twitter=$_POST['twitter'];
     if($email!=null && $password!=null && $fname!=null && $lname!=null && $username!=null && $phone!=null && $age!=null && $gender!=null && $address!=null && $locality!=null && $twitter!=null ){
 
 $sql = "INSERT INTO `sign_up`(`email`, `pass`, `fname`, `lname`, `user_name`, `phone`, `age`, `gender`, `address`, `locality`, `twitter`) VALUES ('$email','$password','$fname','$lname','$username','$phone','$age','$gender','$address','$locality','$twitter')";
-mysqli_query($db, $sql);?><meta http-equiv="refresh" content="0;url=http://localhost:8888/loaders/processing.html" /><?php
+mysqli_query($db, $sql);
+
+//$_SESSION['hi']='yes';
+
+//header('Location: http://localhost:8888/loaders/processing.php');
+echo "<script>location.href='http://localhost:8888/loaders/processing.php'</script>";
+        //ob_end_flush();
     }else{
 ?><script>alert("Please fill all entries");</script><?php
     }
@@ -103,13 +110,13 @@ mysqli_query($db, $sql);?><meta http-equiv="refresh" content="0;url=http://local
 					</label>
 			     </div>
                 <div class="form__wrapper wow fadeInDown" data-wow-delay="0.5s">
-			        <input type="number" class="form__input" id="phone" name="phone" maxlength="10">
+			        <input type="number" class="form__input" id="phone" name="phone" max="9999999999">
 			        <label class="form__label" for="email">
 						<span class="form__label-content">Phone(+91)</span>
 					</label>
 			     </div>
                 <div class="form__wrapper wow fadeInDown" data-wow-delay="0.5s">
-			        <input type="number" class="form__input" id="age" name="age" maxlength="2">
+			        <input type="number" class="form__input" id="age" name="age" max="90">
 			        <label class="form__label" for="email">
 						<span class="form__label-content">Age</span>
 					</label>

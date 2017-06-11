@@ -68,8 +68,9 @@ $resultObj=$connection->query($query);
 								<p>Pick a Tennis stadium, Football stadium, bowling, Gym, etc with a click of a button and make your reservation on the go..<br />
                                 Following is the list of enrolled locations, fell free to pick out your heart's choice 😋 </p>
 							</header>
-                            <?php $i=2;
-                            while($i<=6): ?>
+                            <?php
+                            $i=2;
+                            while(($i<=6)&&($resultObj->num_rows!=0)): ?>
 							<section class="tiles">
                                 <?php while($row=$resultObj->fetch_assoc()): ?>
 								<article class="style<?=$i?>">
@@ -111,7 +112,12 @@ $resultObj=$connection->query($query);
 								</form>
 							</section>-->
 							<section>
-								<h2>Follow</h2>
+                                <header>
+								<h1>Join our <a href="#">community</a></h1>
+								<p>Help adding much more functionality into this project and get out name posted as a contributor.<br> Fork us on Github</p>
+							     </header>
+								<!--<h2>Join our community</h2>
+                                <h5>Help adding much more functionality into this project and get out name posted as a contributor..</h5>-->
 								<ul class="icons">
 									<li><a href="#" class="icon style2 fa-twitter"><span class="label">Twitter</span></a></li>
 									<li><a href="#" class="icon style2 fa-facebook"><span class="label">Facebook</span></a></li>

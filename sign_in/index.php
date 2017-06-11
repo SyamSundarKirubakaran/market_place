@@ -22,7 +22,7 @@ $row=$resultObj->fetch_assoc();
 //echo $row['pass'];
         
 if(strcmp($password,$row['pass'])==0){
- ?> <meta http-equiv="refresh" content="0;url=http://localhost:8888/loaders/processing.html" />
+ ?> <meta http-equiv="refresh" content="0;url=http://localhost:8888/loaders/processing.php" />
 <?php
 }else{
     ?><script>

@@ -24,7 +24,7 @@
 	<body>
 		<div id="content">
             
-          <!--  <?php
+           <?php
                 $imageSelect="Select * from images";
             $result=mysqli_query($db,$imageSelect);
             while($row=mysqli_fetch_array($result)){
@@ -34,7 +34,7 @@
                 echo "<div />";
             }
             
-            ?> -->
+            ?> 
             
 			<form method="post" action="index.php" enctype="multipart/form-data">
 				<input type="hidden" name="size" value="1000000" />

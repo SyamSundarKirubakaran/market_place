@@ -206,8 +206,8 @@
 		            <li><a href="#" data-nav-section="services"><span>Services</span></a></li>
 		            <li><a href="#" data-nav-section="about"><span>About</span></a></li>
 		            <li><a href="#" data-nav-section="contact"><span>Contact</span></a></li>
-                    <!--<li><a href="../loaders/processing.html"><span>Login</span></a></li>
-                    <li><a href="../loaders/processing.html"><span>Sign Up</span></a></li>-->
+                    <!--<li><a href="http://localhost:8888/loaders/signin_load.html"><span>Login</span></a></li>
+                    <li><a href="http://localhost:8888/loaders/signup_load.html"><span>Sign Up</span></a></li>-->
 		          </ul>
 		        </div>
 			    </nav>
