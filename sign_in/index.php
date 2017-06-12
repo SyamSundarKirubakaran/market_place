@@ -34,7 +34,7 @@ $_SESSION['signin']=$row;
     print_r($_SESSION['signin']);
 }*/
     
- ?> <meta http-equiv="refresh" content="0;url=http://localhost:8888/loaders/processing.php" />
+ ?> <meta http-equiv="refresh" content="0;url=http://localhost:8888/loaders/processing1.php" />
 <?php
 }else{
     ?><script>
