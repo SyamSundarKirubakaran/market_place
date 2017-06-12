@@ -55,7 +55,7 @@ session_start();
 				<!-- Main -->
 					<div id="main">
 						<div class="inner">
-							<h1>Registration Successfull, </h1>
+							<h1>Registration Successfull..</h1>
 						</div>
 					</div>
 

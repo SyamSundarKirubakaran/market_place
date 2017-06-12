@@ -22,7 +22,7 @@ $time=$_POST['time'];
 $query="INSERT INTO `register`(`Name`, `email`, `time`, `persons`, `loc_name`, `date`) VALUES ('$name','$email','$time','$persons','$location','$date')";
 mysqli_query($db, $query);
  
-    //echo "<script>location.href='http://localhost:8888/locational_market/successfull.php'</script>";
+    echo "<script>location.href='http://localhost:8888/locational_market/successfull.php'</script>";
 }
 
 ?>

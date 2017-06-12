@@ -29,12 +29,12 @@ if(strcmp($password,$row['pass'])==0){
     
 $_SESSION['signin']=$row;
 
-if(isset($_SESSION['signin'])){
+/*if(isset($_SESSION['signin'])){
     echo "Assigned\n";
     print_r($_SESSION['signin']);
-}
+}*/
     
- ?> <!--<meta http-equiv="refresh" content="0;url=http://localhost:8888/loaders/processing.php" />-->
+ ?> <meta http-equiv="refresh" content="0;url=http://localhost:8888/loaders/processing.php" />
 <?php
 }else{
     ?><script>

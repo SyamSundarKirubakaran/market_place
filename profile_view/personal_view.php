@@ -4,11 +4,12 @@ session_start();
 
 $sample=$_SESSION['name'];
 
-if(isset($_SESSION['signin'])){
+print_r($_SESSION['signin']);
+/*if(isset($_SESSION['signin'])){
     print_r($_SESSION['signin']);
 }else{
     echo "Not Set..";
-}
+}*/
 
 ?>
 <html>

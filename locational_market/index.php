@@ -76,7 +76,7 @@ $resultObj=$connection->query($query);
 									<span class="image">
 										<img src="images/pic01.jpg" alt="" />
 									</span>
-									<a href="generic.html">
+									<a href="generic.php">
 										<h2><?=$row['first_name']?></h2>
 										<div class="content">
 											<p><?=$row['last_name']?></p>
