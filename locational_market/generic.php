@@ -23,7 +23,7 @@
 						<div class="inner">
 
 							<!-- Logo -->
-								<a href="index.html" class="logo">
+								<a href="#" class="logo">
 									<span class="symbol"><img src="images/logo.svg" alt="" /></span><span class="title">Aeroslim Fitness Centre</span>
 								</a>
 
@@ -41,7 +41,10 @@
 					<nav id="menu">
 						<h2>Menu</h2>
 						<ul>
-							<li><a href="index.php">Home</a></li>
+							<li><a href="http://localhost:8888/locational_market/index.php">Home</a></li>
+                            <li><a href="http://localhost:8888/profile_view/personal_view.php">Profile</a></li>
+                            <li><a href="http://localhost:8888/date_picker/index.html">Calender</a></li>
+                            <li><a href="http://localhost:8888/locational_market/community_client.php">Community Client</a></li>
 							<li><a href="http://localhost:8888/elate/index.php">Logout</a></li>
 						</ul>
 					</nav>
@@ -103,7 +106,7 @@
 									</div>
                             <div class="6u 12u$(medium)">
 											<ul class="actions vertical">
-												<li><a href="http://localhost:8888/locational_market/register.php" class="button special fit">Make Reservation</a></li>
+												<li><a href="http://localhost:8888/loaders/app_reserv.php" class="button special fit">Make Reservation</a></li>
 											</ul>
 										</div>
 						</div>
@@ -142,9 +145,9 @@
 									<li><a href="#" class="icon style2 fa-envelope-o"><span class="label">Email</span></a></li>
 								</ul>
 							</section>
-							<ul class="copyright">
+							<!--<ul class="copyright">
 								<li>&copy; Untitled. All rights reserved</li><li>Design: <a href="http://html5up.net">HTML5 UP</a></li>
-							</ul>
+							</ul>-->
 						</div>
 					</footer>
 

@@ -1,5 +1,24 @@
 
 <!DOCTYPE html>
+
+<?php
+
+$works = array(
+        "Aeroslim Fitness Centre", 
+        "Fit fizik Zone", 
+        "SDAT Dolphin Swimming Acadamy",
+        "Body Language",
+        "99 Degree Fitness Studio",
+        "Slim and Shape",
+        "Golden Globe Gym & Fitness Studio",
+        "Fitness Paradise",
+        "Apollo Wellness Plus"
+    );
+
+?>
+
+
+
 <!--[if lt IE 7]>      <html class="no-js lt-ie9 lt-ie8 lt-ie7"> <![endif]-->
 <!--[if IE 7]>         <html class="no-js lt-ie9 lt-ie8"> <![endif]-->
 <!--[if IE 8]>         <html class="no-js lt-ie9"> <![endif]-->
@@ -215,15 +234,15 @@
 		  </div>
 	</header>
 
-	<section id="fh5co-home" data-section="home" style="background-image: url(images/full_image_2.jpg);" data-stellar-background-ratio="0.5">
+	<section id="fh5co-home" data-section="home" style="background-image: url(images/sample_full.jpg);" data-stellar-background-ratio="0.5">
 		<div class="gradient"></div>
 		<div class="container">
 			<div class="text-wrap">
 				<div class="text-inner">
 					<div class="row">
 						<div class="col-md-8 col-md-offset-2">
-							<h1 class="to-animate">Visit the place you love, <a href="../loaders/signup_load.html" target="_blank" title="location logger">Sign Up</a></h1>
-							<h2 class="to-animate">Welcome to <a href="#" title="location logger">Location Logger</a> a place where you can hire regional grounds and have fun time with friends, family and with your loved ones. Already been here! Then Welcome back, <a href="../loaders/signin_load.html" title="location logger">Signin</a> </h2>
+							<h1 class="to-animate">Visit the place you love, <a href="../loaders/signup_load.php" target="_blank" title="location logger">Sign Up</a></h1>
+							<h2 class="to-animate">Welcome to <a href="#" title="location logger">Location Logger</a> a place where you can hire regional grounds and have fun time with friends, family and with your loved ones. Already been here! Then Welcome back, <a href="../loaders/signin_load.php" title="location logger">Signin</a> </h2>
 						</div>
 					</div>
 				</div>
@@ -287,16 +306,17 @@
 				</div>
 			</div>
 			<div class="row row-bottom-padded-sm">
+                <?php for($i=0;$i<9;$i++){ ?>
 				<div class="col-md-4 col-sm-6 col-xxs-12">
 					<a href="images/work_1.jpg" class="fh5co-project-item image-popup to-animate">
 						<img src="images/work_1.jpg" alt="Image" class="img-responsive">
 						<div class="fh5co-text">
-						<h2>Project 1</h2>
-						<span>Branding</span>
+						<h2><?=$works[$i]?></h2>
+						<span>Gym</span>
 						</div>
 					</a>
-				</div>
-				<div class="col-md-4 col-sm-6 col-xxs-12">
+				</div><?php } ?>
+				<!--<div class="col-md-4 col-sm-6 col-xxs-12">
 					<a href="images/work_2.jpg" class="fh5co-project-item image-popup to-animate">
 						<img src="images/work_2.jpg" alt="Image" class="img-responsive">
 						<div class="fh5co-text">
@@ -379,11 +399,11 @@
 						<span>Illustration</span>
 						</div>
 					</a>
-				</div>
+				</div>-->
 			</div>
 			<div class="row">
 				<div class="col-md-12 text-center to-animate">
-					<p>See <a href="#" target="_blank">More</a> entries</p>
+					<p>See <a href="http://localhost:8888/locational_market/index.php" target="_blank">More</a> entries</p>
 				</div>
 			</div>
 		</div>

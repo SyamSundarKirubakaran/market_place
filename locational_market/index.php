@@ -54,7 +54,10 @@ $resultObj=$connection->query($query);
 					<nav id="menu">
 						<h2>Menu</h2>
 						<ul>
-							<li><a href="#">Home</a></li>
+							<li><a href="http://localhost:8888/locational_market/index.php">Home</a></li>
+                            <li><a href="http://localhost:8888/profile_view/personal_view.php">Profile</a></li>
+                            <li><a href="http://localhost:8888/date_picker/index.html">Calender</a></li>
+                            <li><a href="http://localhost:8888/locational_market/community_client.php">Community Client</a></li>
 							<li><a href="http://localhost:8888/elate/index.php">Logout</a></li>
 						</ul>
 					</nav>

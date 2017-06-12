@@ -29,7 +29,7 @@ session_start();
 						<div class="inner">
 
 							<!-- Logo -->
-								<a href="index.html" class="logo">
+								<a href="#" class="logo">
 									<span class="symbol"><img src="images/logo.svg" alt="" /></span><span class="title">Aeroslim Fitness Centre</span>
 								</a>
 
@@ -47,7 +47,10 @@ session_start();
 					<nav id="menu">
 						<h2>Menu</h2>
 						<ul>
-							<li><a href="index.php">Home</a></li>
+							<li><a href="http://localhost:8888/locational_market/index.php">Home</a></li>
+                            <li><a href="http://localhost:8888/profile_view/personal_view.php">Profile</a></li>
+                            <li><a href="http://localhost:8888/date_picker/index.html">Calender</a></li>
+                            <li><a href="http://localhost:8888/locational_market/community_client.php">Community Client</a></li>
 							<li><a href="http://localhost:8888/elate/index.php">Logout</a></li>
 						</ul>
 					</nav>
@@ -56,8 +59,22 @@ session_start();
 					<div id="main">
 						<div class="inner">
 							<h1>Registration Successfull..</h1>
+                            <p>Would you wish to surf more to find more locations..</p>
+                            <!--<div class="6u 12u$(medium)">
+											<ul class="actions vertical">
+												<li><a href="http://localhost:8888/locational_market/index.php"
+                                                       class="button special fit">Surf More</a></li>
+											</ul>
+										</div>-->
+                            <ul class="actions">
+										<li><a href="http://localhost:8888/locational_market/index.php" class="button special">Surf more</a></li>
+										<li><a href="http://localhost:8888/elate/index.php" class="button">Log out</a></li>
+									</ul>
 						</div>
 					</div>
+                
+                
+                
 
 				<!-- Footer -->
 					<footer id="footer">
@@ -92,9 +109,9 @@ session_start();
 									<li><a href="#" class="icon style2 fa-envelope-o"><span class="label">Email</span></a></li>
 								</ul>
 							</section>
-							<ul class="copyright">
+							<!--<ul class="copyright">
 								<li>&copy; Untitled. All rights reserved</li><li>Design: <a href="http://html5up.net">HTML5 UP</a></li>
-							</ul>
+							</ul>-->
 						</div>
 					</footer>
 

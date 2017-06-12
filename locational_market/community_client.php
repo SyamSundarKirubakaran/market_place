@@ -1,28 +1,16 @@
 <!DOCTYPE HTML>
 <?php
-session_start();
-if (isset($_POST['submit'])) {
-$db = mysqli_connect("localhost:8889", "root", "root", "final_db");
-$name=$_POST['name'];
-$email=$_POST['email'];
-$persons=$_POST['persons'];
-$location=$_POST['location'];
-$date=$_POST['date'];
-$time=$_POST['time'];
 
-    $_SESSION['a']=$name;
-    $_SESSION['b']=$email;
-    $_SESSION['c']=$persons;
-    $_SESSION['d']=$location;
-    $_SESSION['e']=$date;
-    $_SESSION['f']=$time;
-    echo $_SESSION['a'];
-//echo $name.$email.$persons.$location.$date.$time;
+if (isset($_POST['submit'])) {
+$db = mysqli_connect("localhost:8889", "root", "root", "test_database");
+$loc_name=$_POST['location'];
+$pay=$_POST['pay'];
+
     
-$query="INSERT INTO `register`(`Name`, `email`, `time`, `persons`, `loc_name`, `date`) VALUES ('$name','$email','$time','$persons','$location','$date')";
+$query="INSERT INTO `Author`(`first_name`, `last_name`) VALUES ('$loc_name','$pay')";
 mysqli_query($db, $query);
  
-    echo "<script>location.href='http://localhost:8888/loaders/registered_suc.php'</script>";
+    echo "<script>location.href='http://localhost:8888/loaders/soon.php'</script>";
 }
 
 ?>
@@ -46,7 +34,7 @@ mysqli_query($db, $query);
 
 							<!-- Logo -->
 								<a href="#" class="logo">
-									<span class="symbol"><img src="images/logo.svg" alt="" /></span><span class="title">Aeroslim Fitness Centre</span>
+									<span class="symbol"><img src="images/logo.svg" alt="" /></span><span class="title">Join our community</span>
 								</a>
 
 							<!-- Nav -->
@@ -74,72 +62,96 @@ mysqli_query($db, $query);
 				<!-- Main -->
 					<div id="main">
 						<div class="inner">
-							<p><span class="image left"><img src="images/gym.jpg" alt="" /></span>FGymnasia apparatus such as bar-bells, parallel bars, jumping board, running path, tennis-balls, cricket field, fencing area, and so forth are used as exercises. In safe weather, outdoor locations are the most conducive to health.[2] Gyms were popular in ancient Greece. Their curricula included Gymnastica militaria or self-defense, gymnastica medica, or physical therapy to help the sick and injured, and gymnastica athletica for physical fitness and sports, from boxing to dance.[3]</p>
-                            <p>These gymnasia also had teachers of wisdom and philosophy. Community gymnastic events were done as part of the celebrations during various village festivals. In ancient Greece there was a phrase of contempt, "He can neither swim nor write." After a while, however, Olympic athletes began training in buildings just for them. Community sports never became as popular among ancient Romans as it had among the ancient Greeks. Gyms were used more as a preparation for military service or spectator sports. During the Roman Empire, the gymnastic art was forgotten. In the Dark Ages there were sword fighting tournaments and of chivalry; and after gunpowder was invented sword fighting began to be replaced by the sport of fencing. There were schools of dagger fighting and wrestling and boxing.[</p>
-							<p>Make you registration by filling out the given form</p>
-							<p>No 106, Behind Olympia Tech Park, 3RD Street Sundar Nagar, Ekkaduthangal, Chennai – 600032<br>Phone: +(91)-44-66427585
-
-</p>                           
+                            <div class="12u$"><span class="image fit"><img src="images/community.jpg" alt="" /></span></div>
+							<p><!--<span class="image left"><img src="images/runner.jpg" alt="" /></span>-->Expand your business online.. Give us the right info of yours and we'll make sure that your place will have more number of visitors than you ever had before. We'll recommand your place to a wide range of customers in your locality and you can draw attention of the most from the customers, b ysitting right from your place.. </p>
+                            <p>Making more customers online through us shall let your location in the top trending list of places and we'll garentee you with assured rewards when it happen..</p>
+                            <p>Good luck!! And we're so excited to have you here.</p>
                             <section>
-									<h2>Register</h2>
+									<h2>Tell us about your place</h2>
 									<form method="post" action="#">
 										<div class="row uniform">
 											<div class="6u 12u$(xsmall)">
-												<input type="text" name="name" id="demo-name" value="" placeholder="Name" />
+												<input type="text" name="name" id="demo-name" value="" placeholder="Name of the location" />
 											</div>
 											<div class="6u$ 12u$(xsmall)">
 												<input type="email" name="email" id="demo-email" value="" placeholder="Email" />
 											</div>
+                                            <div class="6u 12u$(xsmall)">
+												<input type="text" name="oname" id="demo-name" value="" placeholder="Name of the Owner" />
+											</div>
+											<div class="6u$ 12u$(xsmall)">
+												<input type="text" name="phone" id="demo-email" value="" placeholder="Tele Phone Number" />
+											</div>
                                             <div class="6u$ 12u$(xsmall)">
 												<div class="select-wrapper">
-													<select name="persons" id="demo-category">
-														<option value="">No of Persons</option>
-														<option value="1">Myself alone</option>
-														<option value="2">2</option>
-                                                        <option value="3">3</option>
-                                                        <option value="4">4</option>
-                                                        <option value="5">5</option>
-														<option value="6">6</option>
+													<select name="pay" id="demo-category">
+														<option value="">Basic Pay</option>
+														<option value="Rs.300">Rs.300/hour</option>
+														<option value="Rs.500">Rs.500/hour</option>
+                                                        <option value="Rs.700">Rs.700/hour</option>
+                                                        <option value="Rs.1000">Rs.1000/hour</option>
+                                                        <option value="Rs.1500">Rs.1500/hour</option>
+														<option value="Rs.2000">Rs.2000/hour</option>
 													</select>
 												</div>
 											</div>
                                             <div class="6u 12u$(xsmall)">
-												<input type="text" name="location" id="demo-name" value="Aeroslim Fitness Centre" placeholder="Location Name" />
+												<input type="text" name="location" id="demo-name" value="" placeholder="Location Name" />
 											</div>
                                             <div class="6u$ 12u$(xsmall)">
 												<div class="select-wrapper">
-													<select name="date" id="demo-category">
-														<option value="">Date</option>
-														<option value="12/06/2017">Today</option>
-														<option value="13/06/2017">Tomorrow</option>
-														<option value="14/06/2017">The day after</option>
+													<select name="availability" id="demo-category">
+														<option value="">Availability</option>
+														<option value="0">Not available of saturdays and Sundays</option>
+														<option value="1">Available on all days</option>
 													</select>
 												</div>
 											</div>
 											<div class="6u$ 12u$(xsmall)">
 												<div class="select-wrapper">
 													<select name="time" id="demo-category">
-														<option value="">Time</option>
-														<option value="9-10AM">9-10AM</option>
-														<option value="10-11AM">10-11AM</option>
-														<option value="11-12AM">11-12AM</option>
-														<option value="4-5PM">4-5PM</option>
+														<option value="">Time of work</option>
+														<option value="9-12NOON">9-12NOON</option>
+                                                        <option value="4-9PM">4-9PM</option>
 													</select>
 												</div>
 											</div>
-											<!--<div class="6u$ 12u$(small)">
-                                                <p>Prefered Wages:</p>
-												<input type="radio" id="demo-priority-low" name="demo-priority" checked>
-												<label for="demo-priority-low">Low/Normal</label>
+                                            <div class="6u 12u$(xsmall)">
+												<input type="text" name="locality" id="demo-name" value="" placeholder="Locality" />
+											</div>
+                                            <div class="6u$ 12u$(xsmall)">
+												<div class="select-wrapper">
+													<select name="capacity" id="demo-category">
+														<option value="">Mamimum capacity</option>
+														<option value="30">30 people/Small</option>
+														<option value="50">50 people/Medium</option>
+                                                        <option value="70">70 people/Large</option>
+                                                        <option value="100">100 people/Extra large</option>
+													</select>
+												</div>
+											</div>
+                                            <div class="6u$ 12u$(xsmall)">
+												<div class="select-wrapper">
+													<select name="pin" id="demo-category">
+														<option value="">Pin code</option>
+														<option value="625 006">625 006</option>
+                                                        <option value="625 000">625 000</option>
+													</select>
+												</div>
+											</div>
+											<div class="4u 12u$(xsmall)">
+                                                Wages:
+												<input type="radio" id="demo-priority-low" name="demo-priority">
+												<label for="demo-priority-low">Low</label>
 											</div>
 											<div class="4u 12u$(small)">
-												<input type="radio" id="demo-priority-normal" name="demo-priority">
-												<label for="demo-priority-normal">No constaints</label>
+												<input type="radio" id="demo-priority-normal" name="demo-priority" checked>
+												<label for="demo-priority-normal">Normal</label>
 											</div>
 											<div class="4u$ 12u$(small)">
 												<input type="radio" id="demo-priority-high" name="demo-priority">
 												<label for="demo-priority-high">High</label>
-											</div>-->
+											</div>
 											<div class="6u 12u$(small)">
 												<input type="checkbox" id="demo-copy" name="demo-copy">
 												<label for="demo-copy">Email me a copy</label>

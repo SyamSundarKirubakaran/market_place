@@ -41,10 +41,10 @@ html,body,h1,h2,h3,h4,h5,h6 {font-family: "Roboto", sans-serif}
           </div>
         </div>
         <div class="w3-container">
-          <p><i class="fa fa-briefcase fa-fw w3-margin-right w3-large w3-text-teal"></i><?=$sample['twitter']?></p>
-          <p><i class="fa fa-home fa-fw w3-margin-right w3-large w3-text-teal"></i><?=$sample['address']?><?=$sample['locality']?></p>
-          <p><i class="fa fa-envelope fa-fw w3-margin-right w3-large w3-text-teal"></i><?=$sample['email']?></p>
-          <p><i class="fa fa-phone fa-fw w3-margin-right w3-large w3-text-teal"></i><?=$sample['phone']?></p>
+          <p><i class="fa fa-briefcase fa-fw w3-margin-right w3-large w3-text-teal"></i>@bugscripter<?=$sample['twitter']?></p>
+          <p><i class="fa fa-home fa-fw w3-margin-right w3-large w3-text-teal"></i>Madurai<?=$sample['address']?><?=$sample['locality']?></p>
+          <p><i class="fa fa-envelope fa-fw w3-margin-right w3-large w3-text-teal"></i>k.syamsundar21@gmail.com<?=$sample['email']?></p>
+          <p><i class="fa fa-phone fa-fw w3-margin-right w3-large w3-text-teal"></i>9790374010<?=$sample['phone']?></p>
           <hr>
 
           <!--<p class="w3-large"><b><i class="fa fa-asterisk fa-fw w3-margin-right w3-text-teal"></i>Skills</b></p>
