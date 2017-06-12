@@ -1,7 +1,7 @@
 <!DOCTYPE html>
 
 
-<html >
+<html>
 <head>
 <meta http-equiv="refresh" content="6;url=http://localhost:8888/profile_view/personal_view.php" />
   <meta charset="UTF-8">

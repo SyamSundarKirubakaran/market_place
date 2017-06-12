@@ -9,7 +9,7 @@ session_start();
 
 if (isset($_POST['submit'])) {
 $db = mysqli_connect("localhost:8889", "root", "root", "final_db");
-    $email=null;
+$email=null;
 $password=null;
 $fname=null;
 $lname=null;

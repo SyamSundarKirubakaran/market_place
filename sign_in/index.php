@@ -1,7 +1,7 @@
 <!DOCTYPE html>
 
 <?php
-
+session_start();
 if (isset($_POST['submit'])) {
 $dbUser="root";
 $dbPassword="root";
@@ -19,10 +19,22 @@ $password=$_POST['password'];
 $query="Select * from sign_up where email='$email'";
 $resultObj=$connection->query($query);
 $row=$resultObj->fetch_assoc();
-//echo $row['pass'];
+//print_r($row);
+
+$_SESSION['email']=$email;
+        
+echo $_SESSION['email'];
         
 if(strcmp($password,$row['pass'])==0){
- ?> <meta http-equiv="refresh" content="0;url=http://localhost:8888/loaders/processing.php" />
+    
+$_SESSION['signin']=$row;
+
+if(isset($_SESSION['signin'])){
+    echo "Assigned\n";
+    print_r($_SESSION['signin']);
+}
+    
+ ?> <!--<meta http-equiv="refresh" content="0;url=http://localhost:8888/loaders/processing.php" />-->
 <?php
 }else{
     ?><script>
